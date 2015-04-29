@@ -58,7 +58,7 @@ class TestJsonSlurper extends GroovyTestCase {
     
     void testParseUri() {
        File file = new File(new File(".").absolutePath,"src/test/resources/net/sf/json/groovy/sample.json")
-       JSON actual = new JsonSlurper().parse( "file://"+file.absolutePath )
+       JSON actual = new JsonSlurper().parse( "file:///"+file.absolutePath )
        JSONAssert.assertEquals( expected, actual )
     }
     
@@ -76,6 +76,7 @@ class TestJsonSlurper extends GroovyTestCase {
     
     void testParseReader_liveUrl() {
        HttpClient http = new HttpClient()
+	   http.getHostConfiguration().setProxy("192.168.11.17", 8080)
        GetMethod get = new GetMethod("http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=Calvin%20and%20Hobbes")
        int resultCode = http.executeMethod(get)
        if( resultCode != 200 ) {

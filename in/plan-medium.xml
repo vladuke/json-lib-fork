@@ -1,0 +1,732 @@
+<plan planId="111222" name="DA LP G8202 1052480156" grandfatherInd="false" cdhpAvailable="false" mer="false" asoOnly="false" bde="false" standardPlan="true" staticPlan="true" accidentMedicalEmergencyDays="0" hiatusDays="0" religiousEmplInd="false">
+  <coverageCodes>
+    <coverageCode covCode="G8202" carveOutCode="G8203"/>
+  </coverageCodes>
+  <planStatusType value="Canceled"/>
+  <productType value="DirectAccess"/>
+  <planDesign value="LP"/>
+  <insuranceLine value="Health"/>
+  <benefitPeriod value="CalendarYear"/>
+  <claimSystem value="NASCO"/>
+  <fundingCode value="FullyInsured"/>
+  <marketSegment value="Midsize51_99"/>
+  <minValue value="Yes"/>
+  <validPeriods>
+    <timePeriod>
+      <validFrom>
+        <transactionDate year="2015" month="2" day="1"/>
+        <effectiveDate year="1990" month="1" day="1"/>
+      </validFrom>
+      <validTo user="BBROWN5" comment="PlanCreator 15.1.1.4">
+        <transactionDate year="2015" month="2" day="1"/>
+        <effectiveDate year="2010" month="1" day="1"/>
+      </validTo>
+    </timePeriod>
+  </validPeriods>
+  <options>
+    <planOptionList>
+      <options>
+        <accumListChoice>
+          <order>100</order>
+          <choices/>
+          <selectedChoice displayName="NoBenefitPeriodMax" selected="true">
+            <accums>
+              <moneyMaximum isDefault="true">
+                <moneyAccum applyToXrefAccum="false" individualMax="-1.0">
+                  <accumulatorName value="InNetBenefitPeriodMax"/>
+                  <accumulatorType value="DollarLimit"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>100</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </moneyMaximum>
+              <moneyMaximum isDefault="true">
+                <moneyAccum applyToXrefAccum="false" individualMax="-1.0">
+                  <accumulatorName value="OONBenefitPeriodMax"/>
+                  <accumulatorType value="DollarLimit"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>200</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </moneyMaximum>
+            </accums>
+            <planOptionType value="BenefitPeriodMax"/>
+            <planOptionName value="NoBenefitPeriodMax"/>
+            <planOptionCrossAccum value="NoCross"/>
+          </selectedChoice>
+        </accumListChoice>
+      </options>
+      <planOptionType value="BenefitPeriodMax"/>
+    </planOptionList>
+    <planOptionList>
+      <options>
+        <accumListChoice>
+          <order>500</order>
+          <choices/>
+          <selectedChoice displayName="NoCatastrophic" selected="true">
+            <accums>
+              <moneyMaximum isDefault="true">
+                <moneyAccum applyToXrefAccum="false" familyMax="-1.0" individualMax="-1.0">
+                  <accumulatorName value="InNetCatastrophicDlrLmt"/>
+                  <accumulatorType value="DollarLimit"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <accumulationBasis value="Aggregate"/>
+                  <order>100</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </moneyMaximum>
+              <moneyMaximum isDefault="true">
+                <moneyAccum applyToXrefAccum="false" familyMax="-1.0" individualMax="-1.0">
+                  <accumulatorName value="OONCatastrophicDlrLmt"/>
+                  <accumulatorType value="DollarLimit"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <accumulationBasis value="Aggregate"/>
+                  <order>200</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </moneyMaximum>
+            </accums>
+            <planOptionType value="Catastrophic"/>
+            <planOptionName value="NoCatastrophic"/>
+            <planOptionCrossAccum value="NoCross"/>
+          </selectedChoice>
+        </accumListChoice>
+      </options>
+      <planOptionType value="Catastrophic"/>
+    </planOptionList>
+    <planOptionList>
+      <options>
+        <accumOption selected="true">
+          <planOptionType value="Coinsurance"/>
+          <planOptionName value="Coinsurance"/>
+          <order>900</order>
+          <accums>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="100.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="InNetIndepLabsCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>2000</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="100.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="InNetInstIPCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>100</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="100.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="InNetInstOPCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>300</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="100.0">
+                <moneyAccum applyToXrefAccum="false">
+                  <accumulatorName value="InNetPreventiveServCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>1300</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="100.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="InNetProfIPCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>500</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="100.0">
+                <moneyAccum applyToXrefAccum="false">
+                  <accumulatorName value="InNetProfOOHCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>1500</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="100.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="InNetProfOPCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>700</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="100.0">
+                <moneyAccum applyToXrefAccum="false">
+                  <accumulatorName value="InNetProfOVPCPCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>900</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="100.0">
+                <moneyAccum applyToXrefAccum="false">
+                  <accumulatorName value="InNetProfOVSpecCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>1100</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="100.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="InNetSupplCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>1700</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="100.0">
+                <moneyAccum applyToXrefAccum="false">
+                  <accumulatorName value="LabCorpCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>1900</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="70.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="OONIndepLabsCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>2100</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="70.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="OONInstIPCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>200</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="70.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="OONInstOPCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>400</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="70.0">
+                <moneyAccum applyToXrefAccum="false">
+                  <accumulatorName value="OONPreventiveServCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>1400</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="70.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="OONProfIPCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>600</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="70.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="OONProfOOHCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>1600</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="70.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="OONProfOPCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>800</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="70.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="OONProfOVCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>1200</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+            <accumSelection selected="true">
+              <coInsurance isDefault="true" percentage="70.0">
+                <moneyAccum applyToXrefAccum="true">
+                  <accumulatorName value="OONSupplCoin"/>
+                  <accumulatorType value="Coinsurance"/>
+                  <benefitPeriod value="CalendarYear"/>
+                  <order>1800</order>
+                  <targets/>
+                  <sources/>
+                  <options/>
+                  <accumBlueExchanges>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="4010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                    <accumBlueExchange default="false" description="Health Benefit Plan Coverage">
+                      <series value="5010"/>
+                      <code value="30"/>
+                    </accumBlueExchange>
+                  </accumBlueExchanges>
+                </moneyAccum>
+              </coInsurance>
+            </accumSelection>
+          </accums>
+        </accumOption>
+      </options>
+      <planOptionType value="Coinsurance"/>
+    </planOptionList>
+  </options>
+  <choices/>
+  <benefitTypeCoverages>
+    <benefitTypeCoverage available="false" optionChecked="false" benModified="false">
+      <calculationSituations>
+        <calculationSituation minAge="0" maxAge="120" benefitText="Years" appliesToDeductible="false" crossNetwork="false" locked="false">
+          <options/>
+          <calculations>
+            <calculation calcOrder="0" sequenceId="0">
+              <data accidentPeriod="0" hiatusDays="0" rollAccidentMedicalEmergency="false" scheduleNumberId="0" unitMultiplier="0.0" unitOverride="0.0" providerReasonableChargeConversion="0.0">
+                <examinerActions>
+                  <examinerAction>
+                    <examinerActionType value="D"/>
+                    <examinerActionCode value="D"/>
+                    <examinerActionUsageRule value="All"/>
+                  </examinerAction>
+                </examinerActions>
+                <paidUnder/>
+              </data>
+              <calculationType value="Denial"/>
+              <steps/>
+              <options/>
+            </calculation>
+          </calculations>
+          <referralOptions/>
+          <paymentLevelStatusCode value="C"/>
+          <irc value="ALL"/>
+          <ageBand value="Band1"/>
+          <birthdayRule value="ReferToSubgroup"/>
+          <ageType value="Years"/>
+          <specialtyCode value="ALL"/>
+          <networkType value="InNet"/>
+        </calculationSituation>
+        <calculationSituation minAge="0" maxAge="120" benefitText="Years" appliesToDeductible="false" crossNetwork="false" locked="false">
+          <options/>
+          <calculations>
+            <calculation calcOrder="0" sequenceId="0">
+              <data accidentPeriod="0" hiatusDays="0" rollAccidentMedicalEmergency="false" scheduleNumberId="0" unitMultiplier="0.0" unitOverride="0.0" providerReasonableChargeConversion="0.0">
+                <examinerActions>
+                  <examinerAction>
+                    <examinerActionType value="D"/>
+                    <examinerActionCode value="D"/>
+                    <examinerActionUsageRule value="All"/>
+                  </examinerAction>
+                </examinerActions>
+                <paidUnder/>
+              </data>
+              <calculationType value="Denial"/>
+              <steps/>
+              <options/>
+            </calculation>
+          </calculations>
+          <referralOptions/>
+          <paymentLevelStatusCode value="N"/>
+          <irc value="ALL"/>
+          <ageBand value="Band1"/>
+          <birthdayRule value="ReferToSubgroup"/>
+          <ageType value="Years"/>
+          <specialtyCode value="ALL"/>
+          <networkType value="OON"/>
+        </calculationSituation>
+      </calculationSituations>
+      <basLevels>
+        <level1 value="Institutional"/>
+        <level2 value="FreeOPAmbuSerCtrSurgCareFac"/>
+        <level3 value="Anesthesia"/>
+        <level4 value="Cosmetic"/>
+        <level5 value="NotRelevant"/>
+      </basLevels>
+      <serviceCodes/>
+      <blueExchangeCodes/>
+      <benefitText/>
+    </benefitTypeCoverage>
+    <benefitTypeCoverage available="false" optionChecked="false" benModified="false">
+      <calculationSituations>
+        <calculationSituation minAge="0" maxAge="120" benefitText="Years" appliesToDeductible="false" crossNetwork="false" locked="false">
+          <options/>
+          <calculations>
+            <calculation calcOrder="0" sequenceId="0">
+              <data accidentPeriod="0" hiatusDays="0" rollAccidentMedicalEmergency="false" scheduleNumberId="0" unitMultiplier="0.0" unitOverride="0.0" providerReasonableChargeConversion="0.0">
+                <examinerActions/>
+                <paidUnder/>
+              </data>
+              <calculationType value="DCiDL"/>
+              <steps>
+                <calculationStep sequenceId="1" rollOver="false" locked="false">
+                  <coInsurance isDefault="false" percentage="100.0">
+                    <accum accumReference="InNetInstOPCoin"/>
+                  </coInsurance>
+                  <accumulatorType value="Coinsurance"/>
+                </calculationStep>
+                <calculationStep sequenceId="2" rollOver="false" locked="false">
+                  <moneyMaximum isDefault="false">
+                    <accum accumReference="InNetBenefitPeriodMax"/>
+                  </moneyMaximum>
+                  <accumulatorType value="DollarLimit"/>
+                </calculationStep>
+              </steps>
+              <options/>
+            </calculation>
+          </calculations>
+          <referralOptions/>
+          <paymentLevelStatusCode value="C"/>
+          <irc value="ALL"/>
+          <ageBand value="Band1"/>
+          <birthdayRule value="ReferToSubgroup"/>
+          <ageType value="Years"/>
+          <specialtyCode value="ALL"/>
+          <networkType value="InNet"/>
+        </calculationSituation>
+        <calculationSituation minAge="0" maxAge="120" benefitText="Years" appliesToDeductible="false" crossNetwork="false" locked="false">
+          <options/>
+          <calculations>
+            <calculation calcOrder="0" sequenceId="0">
+              <data accidentPeriod="0" hiatusDays="0" rollAccidentMedicalEmergency="false" scheduleNumberId="0" unitMultiplier="0.0" unitOverride="0.0" providerReasonableChargeConversion="0.0">
+                <examinerActions/>
+                <paidUnder/>
+              </data>
+              <calculationType value="DCiDL"/>
+              <steps>
+                <calculationStep sequenceId="1" rollOver="false" locked="false">
+                  <deductible isDefault="false">
+                    <accum accumReference="OONDed"/>
+                  </deductible>
+                  <accumulatorType value="Deductible"/>
+                </calculationStep>
+                <calculationStep sequenceId="2" rollOver="false" locked="false">
+                  <coInsurance isDefault="false" percentage="70.0">
+                    <accum accumReference="OONInstOPCoin"/>
+                  </coInsurance>
+                  <accumulatorType value="Coinsurance"/>
+                </calculationStep>
+                <calculationStep sequenceId="3" rollOver="false" locked="false">
+                  <moneyMaximum isDefault="false">
+                    <accum accumReference="OONBenefitPeriodMax"/>
+                  </moneyMaximum>
+                  <accumulatorType value="DollarLimit"/>
+                </calculationStep>
+              </steps>
+              <options/>
+            </calculation>
+          </calculations>
+          <referralOptions/>
+          <paymentLevelStatusCode value="N"/>
+          <irc value="ALL"/>
+          <ageBand value="Band1"/>
+          <birthdayRule value="ReferToSubgroup"/>
+          <ageType value="Years"/>
+          <specialtyCode value="ALL"/>
+          <networkType value="OON"/>
+        </calculationSituation>
+      </calculationSituations>
+      <basLevels>
+        <level1 value="Institutional"/>
+        <level2 value="FreeOPAmbuSerCtrSurgCareFac"/>
+        <level3 value="Anesthesia"/>
+        <level4 value="DentServicesSurgery"/>
+        <level5 value="NotRelevant"/>
+      </basLevels>
+      <serviceCodes/>
+      <blueExchangeCodes/>
+      <benefitText/>
+    </benefitTypeCoverage>
+  </benefitTypeCoverages>
+  <financialCode/>
+</plan>
